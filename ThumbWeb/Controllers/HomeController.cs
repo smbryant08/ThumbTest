@@ -20,6 +20,10 @@ namespace ThumbWeb.Controllers
         {
 
             USBManager.Add(TypeOfLog,DateTime.Now, IssuedBy, IssuedTo, Convert.ToInt32(Quantity));
+            
+
+
+
 
             
             ViewBag.Message = "Saved!";
