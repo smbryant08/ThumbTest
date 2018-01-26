@@ -9,6 +9,9 @@ namespace Thumb.Lib
     public class ThumbContext : DbContext
     {
 
+
+        //entity framework
+
         public DbSet<USBdb> USBs { get; set; }
 
 

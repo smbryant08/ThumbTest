@@ -22,7 +22,7 @@ namespace ThumbWeb.Controllers
             USBManager.Add(TypeOfLog,DateTime.Now, IssuedBy, IssuedTo, Convert.ToInt32(Quantity));
             
 
-
+            //Controller method
 
 
             
@@ -30,11 +30,29 @@ namespace ThumbWeb.Controllers
 
             return Index();
         }
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
+
+        //for EACH method  there MUST be a corresponding view to it.
+        public ActionResult ViewUsbs()
+        {
+
+           var usbItems= USBManager.GetAll();
+
+
+            usbItems.Add(new USBItem() { Entity_issued_to = "to", IssueDate = DateTime.Now, Issued_by = "by", Quantity_issued = 233, Type_of_log = "log" });
+
+            usbItems.Add(new USBItem() { Entity_issued_to = "to", IssueDate = DateTime.Now, Issued_by = "by", Quantity_issued = 233, Type_of_log = "log" });
+            usbItems.Add(new USBItem() { Entity_issued_to = "to", IssueDate = DateTime.Now, Issued_by = "by", Quantity_issued = 233, Type_of_log = "log" });
+            usbItems.Add(new USBItem() { Entity_issued_to = "to", IssueDate = DateTime.Now, Issued_by = "by", Quantity_issued = 233, Type_of_log = "log" });
+            usbItems.Add(new USBItem() { Entity_issued_to = "to", IssueDate = DateTime.Now, Issued_by = "by", Quantity_issued = 233, Type_of_log = "log" });
+            usbItems.Add(new USBItem() { Entity_issued_to = "to", IssueDate = DateTime.Now, Issued_by = "by", Quantity_issued = 233, Type_of_log = "log" });
+            usbItems.Add(new USBItem() { Entity_issued_to = "to", IssueDate = DateTime.Now, Issued_by = "by", Quantity_issued = 233, Type_of_log = "log" });
+            usbItems.Add(new USBItem() { Entity_issued_to = "to", IssueDate = DateTime.Now, Issued_by = "by", Quantity_issued = 233, Type_of_log = "log" });
+            usbItems.Add(new USBItem() { Entity_issued_to = "to", IssueDate = DateTime.Now, Issued_by = "by", Quantity_issued = 233, Type_of_log = "log" });
+            usbItems.Add(new USBItem() { Entity_issued_to = "to", IssueDate = DateTime.Now, Issued_by = "by", Quantity_issued = 233, Type_of_log = "log" });
+
+
+            return View(usbItems);
         }
 
         public ActionResult Contact()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Thumb.Lib.USBs
 {
-    class USBItem
+   public  class USBItem
     {
         public long Id { get; set; }
 

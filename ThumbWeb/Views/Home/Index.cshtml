@@ -3,6 +3,15 @@
 }
 
 
+@*Bootstrap for UI designs*@
+
+
+@*jquery to access the C# code in an actionresult WITHOUT doing a full form post*@
+
+
+
+
+<a href="/Home/ViewUsbs">View USBs</a>
 
 <br /><br /><br />
             <form action="/Home/Index" method="post">
@@ -64,6 +73,9 @@
                     </div>
 
                     @ViewBag.Message
+
+
+                    @*type submitt buttons post data back to controller level.*@
                     <button id="BTN" type="submit" value="save">SAVE</button>
                 </div>
             </form>
