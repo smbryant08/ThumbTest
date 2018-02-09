@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@*Bootstrap for UI designs*@
+
+
+@*jquery to access the C# code in an actionresult WITHOUT doing a full form post*@
+
+
+
+
+<a href="/USB/ViewUsbs">View USBs</a>
+
+<br /><br /><br />
+<form action="/USB/Add" method="post">
+
+    <div>
+        <div>
+            <span>
+                Type of Log
+            </span>
+            <select id="TypeOfLog" name="TypeOfLog">
+                <option value="USBs" title="USBs" label="USBs"></option>
+
+                <option value="LABELs" title="LABELs" label="LABELs"></option>
+            </select>
+
+        </div>
+
+
+
+        <div>
+            <span>
+                Issued To
+
+            </span>
+            <input type="text" id="IssuedTo" name="IssuedTo" />
+
+
+        </div>
+
+
+        <div>
+            <span>
+                Issued By
+
+            </span>
+            <input type="text" id="IssuedBy" name="IssuedBy" />
+
+
+        </div>
+
+        <div>
+            <span>
+                Quantity
+
+            </span>
+            <input type="text" id="Quantity" name="Quantity" />
+
+
+        </div>
+
+        <div>
+            <span>
+                Issued To
+
+            </span>
+            <input type="text" id="IssuedTo" class="form-control" name="IssuedTo" />
+
+
+        </div>
+
+        @ViewBag.Message
+
+
+        @*type submitt buttons post data back to controller level.*@
+        <button id="BTN" type="submit" class="btn btn-default" value="save">SAVE</button>
+    </div>
+</form>
